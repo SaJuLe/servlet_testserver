@@ -24,5 +24,8 @@ public class UrlMappingQuiz09 extends HttpServlet {
 		out.print("<h2><b>지원 내용</b></h2>");
 		out.print(contents);
 		out.print("</body></html>");
+		
+		
+		out.print(""); // 이슈를 위한 불필요한 코드
 	}
 }
