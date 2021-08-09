@@ -25,7 +25,7 @@ public class UrlMappingQuiz10 extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 
-		
+		//수정
 		String userId = request.getParameter("userId");
 		String password = request.getParameter("password");
 		
