@@ -12,19 +12,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="p-2">
+	<div class="container">
 		<h1>날짜, 시간 링크</h1>
 		<br>
-		<div class="form-group d-flex">
+		<div class="d-flex">
 			<div>
-				<a href="/lesson02/quiz02_1.jsp?type=time">
-					<input type="button" class="form-control btn-info" value="현재 시간 확인">
-				</a>
+				<a href="/lesson02/quiz02_1.jsp?type=time" class="form-control btn-info">현재 시간 확인</a>
 			</div>
 			<div>
-				<a href="/lesson02/quiz02_1.jsp?type=date">
-					<input type="button" class="form-control btn-success" value="현재 날짜 확인">
-				</a>
+				<a href="/lesson02/quiz02_1.jsp?type=date" class="form-control btn-success">현재 날짜 확인</a>
 			</div>	
 		</div>
 	</div>
