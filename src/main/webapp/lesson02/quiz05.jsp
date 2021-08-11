@@ -9,42 +9,40 @@
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<title>계산기</title>
+<title>길이 변환</title>
 </head>
 <style>
-	.text1 {
-		font-size: 36px;
-	}
-	.text2 {
-		font-size: 50px;
+	.title {
+		font-size: 40px;
 	}
 </style>
 <body>
-<%
-	String number1 = request.getParameter("num1");
-	String number2 = request.getParameter("num2");
-	String alpha = request.getParameter("alpha");
-	
-	String front = number1.concat(" " + alpha + " ").concat(number2);
-	double result = 0;
-	
-	double num1 = Double.valueOf(number1);
-	double num2 = Double.valueOf(number2);
-	
-	if (alpha.equals("+")) {
-		result = num1 + num2;
-	} else if (alpha.equals("-")) {
-		result = num1 - num2;
-	} else if (alpha.equals("*")) {
-		result = num1 * num2;
-	} else if (alpha.equals("/")){
-		result = num1 / num2;
-	}
-	
-%>
 	<div class="container">
-		<div class="text1">계산 결과</div>
-		<div class="text2"><%= front %> = <span class="text-info"><%= result %></span></div>
-	</div>
+		<div class="title">
+			길이 변환
+		</div>
+		<form method="post" action="/lesson02/quiz05_1.jsp">
+			<div class="form-group">
+				<div class="d-flex">
+					<input type="text" class="form-control col-2 mr-2" name="cm">
+					<div class="pt-3">cm</div>
+				</div>
+				<div class="pt-2">
+					<label for="inch">인치</label>
+					<input type="checkbox" name="unit" id="inch" value="in">
+					
+					<label for="yard">야드</label>
+					<input type="checkbox" name="unit" id="yard" value="yd">
+					
+					<label for="feet">피트</label>
+					<input type="checkbox" name="unit" id="feet" value="ft">
+					
+					<label for="meter">미터</label>
+					<input type="checkbox" name="unit" id="meter" value="m">
+				</div>
+				<button type="submit" class="form-control btn-success col-1">변환하기</button>
+			</div>
+		</form>	
+	</div>		
 </body>
 </html>
