@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.Set" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +29,13 @@
 <body>
 <%	
 	String str = "0";
-	String[] units = {"in", "yd", "ft", "m"};
-	double[] unitsSol = {0.3937, 0.01093613, 0.03280839, 0.01};
-	
+
+	Map<String, Double> units = new HashMap<>();
+	units.put("in", 0.3937);
+	units.put("yd", 0.01093613);
+	units.put("ft", 0.03280839);
+	units.put("m", 0.01);
+
 	str = request.getParameter("cm");
 	double cm = Double.valueOf(str);
 
@@ -41,11 +47,11 @@
 		<hr>
 		<div class="text3">
 		<%
-			for (int i = 0; i < units.length; i++) {
-				if (Arrays.asList(unitArr).contains(units[i])) {
-					double result = cm * unitsSol[i];
+			for (int i = 0; i < unitArr.length; i++) {
+				if (units.containsKey(unitArr[i])) {
+					double result = cm * units.get(unitArr[i]);
 					
-					out.print(result + " " + units[i] + "<br>");
+					out.print(result + " " + unitArr[i] + "<br>");
 				}
 			}
 		%>
