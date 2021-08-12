@@ -78,6 +78,7 @@
 	for (int i = 0; i < list.size(); i++) {
 		if ((int)list.get(i).get("id") == bookId) {
 			num = i;
+			break;
 		}
 	}
 %>
