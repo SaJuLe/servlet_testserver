@@ -13,9 +13,6 @@
 <title>교포 문고</title>
 </head>
 <style>
-	th, td, tr {
-		text-align: center;
-	}
 	.text1 {
 		font-size: 70px;
 		font-weight: bold;
