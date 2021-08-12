@@ -41,7 +41,9 @@
 	
 	double point = 0.0;
 	
-	if (remove.equals("removeU4")) {
+	if (remove == null) {
+		point = 0.0;
+	} else {
 		point = 4.0;
 	}
 	
@@ -66,14 +68,14 @@
 								if (list.get(i).get("menu").equals(menu) && (double)list.get(i).get("point") > point) {
 									
 						%>
-									<tr>
-										<th><%= menu %></th>
-										<td><%= list.get(i).get("name") %></td>
-										<td><%= list.get(i).get("point") %></td>
-									</tr>
+								<tr>
+									<th><%= menu %></th>
+									<td><%= list.get(i).get("name") %></td>
+									<td><%= list.get(i).get("point") %></td>
+								</tr>
 						<%
-									}
 								}
+							}
 						%>
 					</tr>
 				</tbody>
