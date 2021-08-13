@@ -23,7 +23,7 @@
 	Calendar today = Calendar.getInstance();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 EEE");
 	
-	today.add(Calendar.MONTH, -2); // 임의적으로 달 변경(제거 요망)
+	today.add(Calendar.MONTH, -5); // 임의적으로 달 변경(제거 요망)
 	
 	String day = sdf.format(today.getTime());
 	String num = day.substring(10, 12);
@@ -37,7 +37,7 @@
 	SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy년 MM월 dd일");
 	Calendar nextMonth = Calendar.getInstance();
 	
-	nextMonth.add(Calendar.MONTH, -2); // 임의적으로 달 변경(제거 요망)
+	nextMonth.add(Calendar.MONTH, -5); // 임의적으로 달 변경(제거 요망)
 	nextMonth.add(Calendar.MONTH, +1);
 	nextMonth.add(Calendar.DATE, -date);
 %>
