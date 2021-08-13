@@ -30,16 +30,11 @@
 	String year = day.substring(0, 4);
 	String month = day.substring(6, 8);
 	
+	int maxDate = today.getActualMaximum(Calendar.DAY_OF_MONTH);
+	
 	int date = (Integer.valueOf(num)) - 1;
 	
 	today.add(Calendar.DATE, -date);
-	
-	SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy년 MM월 dd일");
-	Calendar nextMonth = Calendar.getInstance();
-	
-	nextMonth.add(Calendar.MONTH, -5); // 임의적으로 달 변경(제거 요망)
-	nextMonth.add(Calendar.MONTH, +1);
-	nextMonth.add(Calendar.DATE, -date);
 %>
 	<div class="container">
 		<div class="d-flex justify-content-center mt-3">
@@ -101,7 +96,7 @@
 						%>
 					</tr>
 					<%
-						while(today.compareTo(nextMonth) < 0) {				
+						while(number <= maxDate) {				
 					%>
 					<tr class="text-center">
 						<%
@@ -112,7 +107,7 @@
 						<%		
 								today.add(Calendar.DATE, +1);
 								number++;
-								if (dayOfMonth.equals("토") || today.compareTo(nextMonth) == 0) { // 조건으로 분기설정
+								if (dayOfMonth.equals("토") || number > maxDate) { // 조건으로 분기설정
 									break;
 								}
 							}
