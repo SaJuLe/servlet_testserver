@@ -119,16 +119,7 @@ footer {
 						<td class="text-center"><%= list.get(i).get("category") %></td>
 					</tr>
 						<%
-								} else if (category == null) {
-									
-						%>
-					<tr>
-						<td class="text-center"><%= list.get(i).get("ch") %></td>
-						<td class="text-center"><%= list.get(i).get("name") %></td>
-						<td class="text-center"><%= list.get(i).get("category") %></td>
-					</tr>	
-						<%			
-								} else if (category.equals("전체")) {
+								} else if ((category == null) || (category.equals("전체"))) {
 									
 						%>
 					<tr>
