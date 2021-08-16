@@ -23,8 +23,6 @@
 	Calendar today = Calendar.getInstance();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 EEE");
 	
-	today.add(Calendar.MONTH, -5); // 임의적으로 달 변경(제거 요망)
-	
 	String day = sdf.format(today.getTime());
 	String num = day.substring(10, 12);
 	String year = day.substring(0, 4);
