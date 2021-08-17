@@ -46,35 +46,14 @@ footer {
 <body>
 	<div class="container">
 		<header class="w-50 d-flex">
-			<div
-				class="text-success w-25 d-flex justify-content-center align-items-center"
-				onClick="location.href='/lesson03/quiz02/main.jsp'">
-				<h2>Melong</h2>
-			</div>
-			<div class="d-flex align-items-center">
-				<jsp:include page="search.jsp"></jsp:include>
-			</div>
+			<jsp:include page="header.jsp"></jsp:include>
 		</header>
 		<nav>
-			<ul class="nav nav-fill w-50 d-flex justify-content-end">
-				<li class="nav-item"><a href="#"
-					class="nav-link font-weight-bold text-dark">멜롱챠트</a></li>
-				<li class="nav-item"><a href="#"
-					class="nav-link font-weight-bold text-dark">최신음악</a></li>
-				<li class="nav-item"><a href="#"
-					class="nav-link font-weight-bold text-dark">장르음악</a></li>
-				<li class="nav-item"><a href="#"
-					class="nav-link font-weight-bold text-dark">멜롱DJ</a></li>
-				<li class="nav-item"><a href="#"
-					class="nav-link font-weight-bold text-dark">뮤직어워드</a></li>
-			</ul>
+			<jsp:include page="nav.jsp"></jsp:include>
 		</nav>
-			<jsp:include page="sort.jsp"></jsp:include>
+		<jsp:include page="sort.jsp"></jsp:include>
 		<footer>
-			<hr>
-			<address class="text-secondary ml-3">
-				<small>Copyright 2021. melong All Rights Reserved.</small>
-			</address>
+			<jsp:include page="footer.jsp"></jsp:include>
 		</footer>
 	</div>
 </body>
