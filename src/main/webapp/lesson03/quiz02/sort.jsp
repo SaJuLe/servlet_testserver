@@ -42,7 +42,7 @@ musicList.add(musicInfo);
 musicInfo = new HashMap<>();
 musicInfo.put("id", 3);
 musicInfo.put("title", "밤편지");
-musicInfo.put("album", "palette");
+musicInfo.put("album", "Palette");
 musicInfo.put("singer", "아이유");
 musicInfo.put("thumbnail", "https://upload.wikimedia.org/wikipedia/ko/b/b6/IU_Palette_final.jpg");
 musicInfo.put("time", 253);
@@ -94,6 +94,7 @@ for (int i = 0; i < musicList.size(); i++) {
 	if (musicList.get(i).get("title").equals(name)) {
 		i = i + 1;
 		songId = String.valueOf(i);
+		break;
 	}
 }
 
