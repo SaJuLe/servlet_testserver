@@ -91,6 +91,11 @@ int id = Integer.valueOf(type);
 int min = (int) musicList.get(id - 1).get("time") / 60;
 int sec = (int) musicList.get(id - 1).get("time") % 60;
 %>
+<div class="mt-2 ml-1 mb-2">
+		<h5>
+			<b>곡정보</b>
+		</h5>
+	</div>
 <div class="d-flex contents1 border border-success">
 	<div class="col-2 d-flex justify-content-center align-items-center m-2">
 		<img alt="프로필사진" src="<%=musicList.get(id - 1).get("thumbnail")%>"
