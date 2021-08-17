@@ -45,16 +45,10 @@ footer {
 </style>
 <body>
 	<div class="container">
-		<header class="w-50 d-flex">
-			<jsp:include page="header.jsp"></jsp:include>
-		</header>
-		<nav>
-			<jsp:include page="nav.jsp"></jsp:include>
-		</nav>
+		<jsp:include page="header.jsp"></jsp:include>
+		<jsp:include page="nav.jsp"></jsp:include>
 		<jsp:include page="sort.jsp"></jsp:include>
-		<footer>
-			<jsp:include page="footer.jsp"></jsp:include>
-		</footer>
+		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
 </body>
 </html>
