@@ -24,16 +24,16 @@ public class Lesson04Ex01Servlet extends HttpServlet {
 		
 		// 쿼리 수행
 		
-//		// 1) insert query
-//		String insertQuery = "insert into `used_goods` (title, price, description, sellerId)"
-//				+ " values ('고양이 간식 팝니다.', 2000, '저희 고양이가 입맛이 까다로워서 안먹어요', 1)";
-//		
-//		try {
-//			mysqlService.update(insertQuery);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		// 1) insert query
+		String insertQuery = "insert into `used_goods` (title, price, description, sellerId)"
+				+ " values ('고양이 간식 팝니다.', 2000, '저희 고양이가 입맛이 까다로워서 안먹어요', 1)";
+		
+		try {
+			mysqlService.update(insertQuery);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		// 2) select
 		String selectQuery = "select * from used_goods";
