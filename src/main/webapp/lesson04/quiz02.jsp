@@ -63,5 +63,8 @@
 			<button type="submit" class="form-control btn-success mt-3" onclick="location.href='/lesson04/quiz02_1.jsp'">링크 추가하기</button>
 		</div>
 	</div>
+	<%
+		mysqlService.disconnect();
+	%>
 </body>
 </html>
