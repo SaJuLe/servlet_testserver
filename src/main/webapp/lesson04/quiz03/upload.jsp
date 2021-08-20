@@ -1,17 +1,30 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.test.common.MysqlService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <div class="contents">
+<%
+	MysqlService mysqlService = MysqlService.getInstance();
+	
+	mysqlService.connection();
+	
+	String selectQuery1 = "select * from seller";
+	ResultSet result = mysqlService.select(selectQuery1);
+%>
 	<div class="text">물건 올리기</div>
 	<div class="pt-3">
 		<form name="frm" id="frm" method="post">
 			<div class="d-flex w-100 justify-content-between">
 				<select class="form-control col-3" name="nickname" id="nickname">
 					<option value="choose">-아이디 선택-</option>
-					<option value="1">마로비</option>
-					<option value="2">아메리카노</option>
-					<option value="3">최준</option>
-					<option value="4">빠다</option>
-					<option value="5">하구루</option>
+					<%
+						while (result.next()) {	
+					%>
+					<option value="<%= result.getInt("id") %>"><%= result.getString("nickname") %></option>
+					<%
+						}
+						mysqlService.disconnect();
+					%>
 				</select>
 
 				<div class="col-7 d-flex justify-content-center">
