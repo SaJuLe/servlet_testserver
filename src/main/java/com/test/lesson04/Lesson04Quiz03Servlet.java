@@ -24,8 +24,16 @@ public class Lesson04Quiz03Servlet extends HttpServlet {
 		
 		mysqlService.connection();
 		
-		String insertQuery = "insert into `used_goods` (sellerId, title, price, description, picture)"
-				+ "values ('" + nickname + "', '" + title + "', '" + price + "', '" + description + "', '" + url + "')";
+		String insertQuery = "";
+		
+		if (url == "") {
+			insertQuery = "insert into `used_goods` (sellerId, title, price, description)"
+					+ "values ('" + nickname + "', '" + title + "', '" + price + "', '" + description + "')";
+		} else {
+			insertQuery = "insert into `used_goods` (sellerId, title, price, description, picture)"
+					+ "values ('" + nickname + "', '" + title + "', '" + price + "', '" + description + "', '" + url + "')";
+		}
+		
 		
 		try {
 			mysqlService.update(insertQuery);
