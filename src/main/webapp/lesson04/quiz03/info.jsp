@@ -9,7 +9,8 @@
 
 	mysqlService.connection();
 
-	String selectQuery1 = "select A.*, B.* from seller AS A join used_goods AS B on A.id = B.sellerId where B.id = " + number;
+	String selectQuery1 = "select A.*, B.* from seller AS A join used_goods AS B on A.id = B.sellerId where B.id = "
+			+ number;
 	ResultSet result = mysqlService.select(selectQuery1);
 
 	while (result.next()) {
@@ -44,7 +45,9 @@
 		</div>
 		<form method="post" action="/lesson04/quiz03_delete?id=<%=number%>">
 			<button type="submit" id="submit"
-				class="form-control input-group-text d-flex justify-content-center align-items-end">삭제하기</button>
+				class="form-control input-group-text d-flex justify-content-center align-items-end">
+				삭제하기
+			</button>
 		</form>
 	</div>
 	<%
